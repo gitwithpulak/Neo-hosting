@@ -1,0 +1,321 @@
+@media screen and (max-width: 420px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 100%;
+  }
+  header {
+    width: 100%;
+    height: 70px;
+    display: block;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 10px;
+    z-index: 2;
+    background-color: rgb(72, 72, 247);
+  }
+
+  header span {
+    font-size: 45px;
+    padding: 0px 5px;
+  }
+
+  #home {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+
+  #pages {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 70px;
+    background-color: rgb(107, 107, 247);
+
+    transform: translateX(-103%);
+    transition: 0.6s ease-in-out;
+  }
+  #pages ul {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .u-line {
+    display: none;
+  }
+
+  .brand {
+    display: inline-block;
+  }
+  .brand span {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .brand img {
+    width: 35px;
+  }
+  #hamburger {
+    width: 30px;
+    font-size: 25px;
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  header h5 {
+    display: none;
+  }
+  #register {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+
+  #server {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  #serverimg img {
+    width: 100%;
+  }
+
+  .domain {
+    width: 340px;
+    margin: 0px auto;
+  }
+
+  #domaisearch {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  #newdo h2 {
+    width: 330px;
+    margin: 10px auto;
+    font-size: 35px;
+  }
+
+  #newdo p {
+    width: 320px;
+    margin: 10px auto;
+  }
+
+  .bydosear {
+    width: 330px;
+    margin: 0px auto;
+  }
+
+  .bydosear input {
+    width: 300px;
+    padding: 10px 0px;
+  }
+  #feadomain {
+    height: 100%;
+  }
+  #feadomain h1 {
+    width: 330px;
+    margin: 10px auto;
+    font-size: 29px;
+    padding: 10px 5px;
+  }
+
+  #feature2ame {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 10px;
+  }
+
+  .card {
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .card h4 {
+    padding: 0px;
+  }
+
+  .card p {
+    display: none;
+  }
+
+  #hostplan {
+    padding: 10px 5px;
+    height: 100%;
+  }
+
+  #hostplan h1 {
+    width: 330px;
+    margin: 0px auto;
+  }
+
+  #hostplan > p {
+    display: none;
+  }
+
+  #planhosting {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .yourplan {
+    width: 300px;
+    height: 370px;
+    line-height: 22px;
+    padding: 15px 0px;
+    margin: 10px 0px;
+  }
+
+  #hostplan::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      170deg,
+      rgb(72, 72, 247) 55%,
+      rgb(255, 255, 255) 40%
+    );
+    z-index: -1;
+  }
+
+  #globalserloc {
+    width: 100%;
+    height: 100%;
+    padding: 15px 20px;
+  }
+
+  #location {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #location h1 {
+    font-size: 45px;
+  }
+
+  #goserver {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #goserver img {
+    width: 320px;
+    height: 250px;
+  }
+
+  .locationdiv {
+    padding: 10px 0px;
+  }
+
+  #custosuport {
+    padding: 15px 20px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #custosuport::before {
+    background: none;
+  }
+
+  #sersuport {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  #sersuport h1 {
+    font-size: 45px;
+  }
+
+  #mayserver img {
+    width: 320px;
+    height: 200px;
+  }
+
+  #question {
+    width: 100%;
+    height: 100%;
+    padding: 15px 10px;
+  }
+
+  #question h1 {
+    font-size: 45px;
+    margin: 0px;
+  }
+
+  #question > p {
+    display: none;
+  }
+
+  #doques {
+    margin: 20px 0px;
+  }
+
+  .questi {
+    padding: 0px 15px;
+  }
+
+  #contact {
+    width: 100%;
+    height: auto;
+    padding-top: 5rem;
+  }
+
+  .slide {
+    width: 330px;
+    height: 300px;
+  }
+
+  .slidesho {
+    width: 330px;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+  }
+
+  .arrow {
+    margin-top: -160px;
+    background: white;
+    color: black;
+    font-size: 30px;
+  }
+
+  .prev {
+    left: 0px;
+  }
+
+  .next {
+    right: 0px;
+  }
+
+  #companydetail {
+    display: none;
+  }
+
+  #address {
+    padding-top: 10px;
+  }
+}

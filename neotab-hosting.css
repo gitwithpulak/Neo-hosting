@@ -1,0 +1,8 @@
+@media (min-width:600px) and (max-width:1000px){
+    body{
+        width: 100%;
+    }
+    header{
+        width:400px;
+    }
+}

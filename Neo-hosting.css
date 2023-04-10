@@ -1,0 +1,893 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* scrollbar css======================================= */
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+/* ==================================================== */
+
+#home {
+  width: 100%;
+  height: 100vh;
+  background: rgb(72, 72, 247);
+  transition: 0.5s;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  /* padding: 0px 30px; */
+  transition: 0.5s;
+  z-index: 10;
+  order: 1;
+}
+
+/* header img{
+    color: blue;
+} */
+
+.brand img {
+  width: 45px;
+}
+#hamburger {
+  display: none;
+}
+
+header span {
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+}
+#pages {
+  width: 850px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#pages ul {
+  width: 520px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#pages ul li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+#pages ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.u-line {
+  width: 0%;
+  height: 3px;
+  margin-top: 2px;
+  background-color: white;
+}
+#pages ul li :hover ~ .u-line {
+  width: 100%;
+  transition: 0.5s;
+}
+
+#signup {
+  padding: 15px 50px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  background: linear-gradient(90deg, rgb(0, 174, 255), rgb(35, 35, 202));
+  color: white;
+  cursor: pointer;
+}
+
+#signin {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 7px;
+}
+
+/* ****************** */
+/* crossbutton  */
+.cross {
+  position: relative;
+  font-size: 20px;
+  color: rgb(72, 72, 247);
+  font-weight: bold;
+  cursor: pointer;
+  top: -50px;
+}
+
+/* **************************************************************************************** */
+/* start signup page */
+
+#register {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+#signuppage {
+  width: 350px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 15px;
+  z-index: 100;
+  box-shadow: 1px 7px 10px black;
+}
+
+#signuppage h2 {
+  color: rgb(72, 72, 247);
+  font-size: 35px;
+  width: 150px;
+  margin: auto;
+}
+
+input {
+  width: 280px;
+  margin: 17px 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid rgb(72, 72, 247);
+}
+
+input[type="reset"] {
+  width: 120px;
+  background-color: rgb(72, 72, 247);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  width: 180px;
+  background-color: rgb(72, 72, 247);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tybtn {
+  display: flex;
+}
+
+/* **************************************************************************************** */
+/* start signin page */
+
+#entry {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+#signinpage {
+  width: 350px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 15px;
+  z-index: 100;
+  box-shadow: 1px 7px 10px black;
+}
+
+#signinpage h2 {
+  color: rgb(72, 72, 247);
+  font-size: 35px;
+  width: 150px;
+  margin: auto;
+}
+
+#sinbtn {
+  width: 100px;
+  padding: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-left: 6px;
+  background-color: rgb(72, 72, 247);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* **************************************************************************************** */
+.scrlly {
+  width: 100%;
+  height: 70px;
+  box-shadow: 1px 7px 15px black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(57, 57, 250);
+}
+
+#server {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px 60px 10px 60px;
+  /* order: 2; */
+}
+
+.domain {
+  color: rgb(159, 222, 247);
+  font-weight: bold;
+}
+
+#heading {
+  box-sizing: border-box;
+  padding: 25px;
+}
+
+#heading h1 {
+  font-size: 57px;
+  color: white;
+  padding: 30px 0px;
+}
+
+.domainre {
+  color: rgb(177, 189, 199);
+  font-weight: bold;
+}
+
+#serverimg img {
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 1px 5px 10px black;
+}
+
+#feadomain {
+  width: 100%;
+  height: 100vh;
+  background: rgb(72, 72, 247);
+}
+
+#domaisearch {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 80px;
+}
+
+#newdo h2 {
+  color: white;
+  font-size: 30px;
+  padding-bottom: 12px;
+}
+
+#newdo p {
+  color: rgb(107, 152, 250);
+  font-weight: 10px;
+  font-weight: bold;
+}
+
+#buydomain {
+  text-align: center;
+}
+
+#buydomain img {
+  width: 35px;
+  padding: 0px 10px;
+}
+
+.bydosear {
+  width: 800px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.bydosear input {
+  width: 700px;
+  height: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 10px;
+}
+.bydosear input:focus {
+  border: none;
+  outline: none;
+}
+
+#buydomain p {
+  color: white;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+
+#feadomain h1 {
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  padding: 50px 0px;
+  color: white;
+}
+
+#feature2ame {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 20px 50px;
+}
+
+.card {
+  width: 400px;
+  height: 200px;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 15px;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.card h4 {
+  color: white;
+  padding: 15px 0px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.card p {
+  color: rgb(110, 193, 241);
+  font-weight: bold;
+}
+
+#hostplan {
+  width: 100%;
+  height: 110vh;
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 50px 50px;
+}
+
+#hostplan::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    170deg,
+    rgb(72, 72, 247) 65%,
+    rgb(255, 255, 255) 40%
+  );
+  z-index: -1;
+}
+
+#hostplan h1 {
+  width: 100%;
+  font-size: 40px;
+  color: white;
+  padding: 15px 0px;
+  margin-top: 25px;
+}
+
+#hostplan > p {
+  color: rgb(82, 184, 243);
+  font-weight: bold;
+  width: 800px;
+  margin: 20px auto;
+}
+
+#planhosting {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.yourplan {
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  line-height: 35px;
+  box-sizing: border-box;
+  padding: 35px 0px;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 1px 2px 7px black;
+}
+
+hr {
+  width: 250px;
+  margin: 0px auto;
+}
+
+.yourplan img {
+  width: 50px;
+  height: 50px;
+  padding: 27px 35px;
+  border-radius: 100px;
+  border: 5px solid rgb(72, 72, 247);
+}
+
+.yourplan h2 {
+  color: rgb(72, 72, 247);
+}
+
+.yourplan span {
+  font-size: 25px;
+  color: rgb(72, 72, 247);
+}
+
+.yourplan p {
+  font-weight: bold;
+  color: rgb(88, 88, 88);
+}
+
+.btnstart {
+  padding: 8px 60px;
+  border: 2px solid rgb(72, 72, 247);
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(72, 72, 247);
+  background: transparent;
+  cursor: pointer;
+}
+
+.yourplan:hover {
+  transform: translateY(-7px);
+  box-shadow: 1px 3px 7px black;
+  transition: 0.5s;
+}
+
+.yourplan:hover .btnstart {
+  background: linear-gradient(160deg, rgb(128, 219, 247), rgb(72, 72, 247));
+  color: white;
+  border: none;
+  box-shadow: 1px 3px 7px black;
+  transition: 0.5s;
+  transform: translateY(2px);
+}
+
+#globalserloc {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 20px 50px;
+}
+
+#location {
+  width: 100%;
+  display: flex;
+}
+
+#location img {
+  width: 650px;
+  height: 550px;
+  transition: 0.5s;
+  animation-name: bouns;
+  animation-duration: 2s;
+}
+
+/* #location img:hover{
+    transform: translateY(-5px);
+} */
+#goserver {
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+#location h1 {
+  font-size: 50px;
+  color: rgb(38, 38, 231);
+}
+
+#location p {
+  color: rgb(126, 125, 125);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 30px 0px;
+}
+
+#location li {
+  color: rgb(126, 125, 125);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.locationdiv {
+  box-sizing: border-box;
+  padding: 140px 20px 50px 20px;
+}
+
+#custosuport {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 80px 50px;
+  position: relative;
+}
+
+#custosuport::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(170deg, white 55%, rgb(72, 72, 247) 45%);
+  z-index: -1;
+}
+
+#sersuport {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0px 20px;
+}
+
+#mayserver {
+  animation-name: bonus;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes bonus {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+#sersuport h1 {
+  font-size: 50px;
+  color: rgb(38, 38, 231);
+}
+
+#sersuport p {
+  color: rgb(126, 125, 125);
+  font-size: 15px;
+  font-weight: 600;
+  margin: 30px 0px;
+}
+
+#sersuport li {
+  color: rgb(126, 125, 125);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+#sersuport button {
+  padding: 15px 40px;
+  margin: 30px 0px;
+  background: linear-gradient(90deg, rgb(0, 174, 255), rgb(35, 35, 202));
+  font-size: 18px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#sersuport img {
+  width: 600px;
+  height: 400px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 8px 3px grey;
+  transition: 0.5s;
+}
+
+/* #sersuport img:hover{
+    transform: translateY(-5px);
+} */
+#question {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 50px 50px;
+  background: rgb(72, 72, 247);
+}
+
+#question h1 {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+
+#question > p {
+  width: 800px;
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(179, 176, 176);
+}
+
+#doques {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 80px 20px;
+}
+
+.questi {
+  width: 600px;
+  box-sizing: border-box;
+  padding: 0px 30px;
+}
+
+.questi h3 {
+  color: white;
+}
+
+.questi p {
+  color: rgb(179, 176, 176);
+  font-weight: bold;
+  padding: 15px 0px 10px 15px;
+}
+#moveup img {
+  width: 40px;
+  height: 30px;
+}
+#moveup {
+  position: fixed;
+  background-color: rgb(0, 174, 255);
+  width: 45px;
+  right: 10px;
+  bottom: 20px;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  transition: 0.5s;
+  z-index: 1;
+  /* box-sizing: border-box; */
+  padding: 5px 0px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px black;
+  display: none;
+}
+
+.fixed {
+  position: fixed;
+  top: 500;
+}
+
+.quebtn {
+  width: 160px;
+  display: block;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(90deg, rgb(0, 174, 255), rgb(35, 35, 202));
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+#contact {
+  width: 100%;
+  height: auto;
+  background: rgb(72, 72, 247);
+  padding: 2rem 0rem 3rem 0rem;
+}
+
+#address {
+  width: 100%;
+  display: flex;
+  padding-top: 50px;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 50px 60px 0px 100px;
+}
+
+.branhost {
+  height: 300px;
+}
+
+.branhost p {
+  font-weight: bold;
+  color: white;
+  margin: 20px 0px;
+}
+
+.branhost button {
+  width: 300px;
+  padding: 5px 0px;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 10px 0px;
+  border-radius: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.branhost span {
+  font-size: 25px;
+  padding: 12px 15px;
+  border: 2px solid white;
+  color: white;
+  border-radius: 30px;
+  line-height: 100px;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+#email {
+  background: transparent;
+  border: 2px solid white;
+}
+
+#subcribe {
+  background: linear-gradient(180deg, rgb(0, 174, 255), rgb(35, 35, 202));
+  border: none;
+}
+
+.brands {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding-top: rem; */
+}
+
+.brands h5 {
+  font-size: 30px;
+  color: white;
+  text-shadow: 1px 4px 7px black;
+}
+
+.slide {
+  width: 100%;
+  height: 250px;
+  margin: auto;
+}
+
+.arrow {
+  color: rgb(72, 72, 247);
+  padding: 5px 18px;
+  background-color: white;
+  border-radius: 50px;
+  font-size: 30px;
+  position: absolute;
+  margin-top: -145px;
+  cursor: pointer;
+}
+
+.slidesho {
+  width: 1000px;
+  height: 250px;
+  background-color: rgb(57, 57, 250);
+  color: white;
+  margin: auto;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 30px 60px;
+  border: 2px solid white;
+  border-radius: 25px;
+  box-shadow: 1px 4px 7px black;
+  display: none;
+}
+
+.slidesho p {
+  font-weight: bold;
+}
+
+.prev {
+  left: 150px;
+}
+
+.next {
+  right: 150px;
+}
+
+.reveiw {
+  width: 280px;
+  display: inline-flex;
+  font-size: 45px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 75px;
+  margin-top: 20px;
+}
+
+.reveiw span {
+  font-size: 60px;
+}
+
+#address div li {
+  line-height: 30px;
+  list-style: none;
+  color: white;
+}
+
+#address div h4 {
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+  text-shadow: 1px 2px 3px black;
+}
+
+#companydetail {
+  width: 700px;
+  display: flex;
+  justify-content: space-around;
+}
